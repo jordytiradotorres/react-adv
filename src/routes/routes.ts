@@ -1,3 +1,4 @@
+import { ShoppingPage } from "./../02-component-patterns/pages/ShoppingPage";
 import { lazy, LazyExoticComponent } from "react";
 // import { LazyPage1, LazyPage2, LazyPage3 } from '../01-lazyload/pages';
 // import { LazyPage1 } from '../01-lazyload/pages';
@@ -31,5 +32,11 @@ export const routes: Route[] = [
     path: "no-lazy",
     Component: NoLazy,
     name: "No Lazy",
+  },
+  {
+    to: "/shopping-page",
+    path: "shopping-page",
+    Component: ShoppingPage,
+    name: "Shopping Page",
   },
 ];
