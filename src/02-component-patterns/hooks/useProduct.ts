@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Product, onChangeArgs } from "../interfaces/interfaces";
 
 interface useProductArgs {
@@ -14,16 +14,7 @@ export const useProduct = ({
 }: useProductArgs) => {
   const [counter, setCounter] = useState(value);
 
-  // !! esto es para hacer la negacion
-  const isControlled = useRef(!!onChange);
-
   const increaseBy = (value: number) => {
-    if (isControlled.current) {
-      // aqui el signo ! es para decirle a typescript, si confia en mi
-      // vas a tener un valor siempre en el onChange
-      return onChange!({ count: value, product });
-    }
-
     const newValue = Math.max(counter + value, 0);
     setCounter(newValue);
     onChange && onChange({ count: newValue, product });
