@@ -3,7 +3,8 @@ import { ErrorMessage, useField } from "formik";
 interface IMyTextInputProps {
   label: string;
   name: string;
-  type?: "text" | "email" | "password" | "checkbox";
+  // comente solo cuando es DynamicForm
+  // type?: "text" | "email" | "password" | "checkbox";
   placeholder?: string;
   [x: string]: any;
 }

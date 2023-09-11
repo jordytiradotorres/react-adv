@@ -8,6 +8,8 @@ import {
   FormikBasicPage,
   FormikYupPage,
   FormikComponents,
+  RegisterFormikPage,
+  DynamicForm,
 } from "../03-forms/pages";
 
 type JSXComponent = () => JSX.Element;
@@ -34,6 +36,12 @@ export const routes: Route[] = [
     name: "Register Page",
   },
   {
+    path: "/formik-register/*",
+    to: "/formik-register/",
+    Component: RegisterFormikPage,
+    name: "Register Formik Page",
+  },
+  {
     path: "/formik-basic/*",
     to: "/formik-basic/",
     Component: FormikBasicPage,
@@ -56,6 +64,12 @@ export const routes: Route[] = [
     to: "/formik-abstraction/",
     Component: FormikAbstraction,
     name: "Formik abstraction",
+  },
+  {
+    path: "/dynamic-form/*",
+    to: "/dynamic-form/",
+    Component: DynamicForm,
+    name: "Dynamic Form",
   },
   {
     path: "/lazyload/*",

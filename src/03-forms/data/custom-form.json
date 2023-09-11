@@ -1,0 +1,47 @@
+[
+  {
+    "type": "text",
+    "label": "First Name",
+    "name": "firstName",
+    "placeholder": "Fernando",
+    "value": "",
+    "validations": [{ "type": "required" }, { "type": "minLength", "value": 5 }]
+  },
+  {
+    "type": "email",
+    "label": "Email",
+    "name": "email",
+    "placeholder": "jordy@gmail.com",
+    "value": "",
+    "validations": [{ "type": "required" }, { "type": "email" }]
+  },
+  {
+    "type": "text",
+    "label": "Last Name",
+    "name": "lastName",
+    "placeholder": "Jordy",
+    "value": "",
+    "validations": [{ "type": "required" }]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": [
+      {
+        "id": 1,
+        "description": "Dragon ball"
+      },
+      {
+        "id": 2,
+        "description": "Supercampeones"
+      },
+      {
+        "id": 3,
+        "description": "Pokemon"
+      }
+    ],
+    "validations": [{ "type": "required" }]
+  }
+]
